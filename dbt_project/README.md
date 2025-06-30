@@ -3,13 +3,13 @@
 
 This dbt project models data for customer churn analysis, using DuckDB as the backend. The models are built from a public marketing dataset and include staging, fact, and dimension layers.
 
-## 🧱 Project Structure
+## Project Structure
 
 - `models/staging/`: Cleans and standardizes raw seed data.
 - `models/marts/`: Core business logic for churn analysis, including `fct_customer_personalities`.
 - `seeds/`: Raw CSVs used as input.
 
-## 🚀 Running the Project
+## Running the Project
 
 1. Install dependencies (see main README)
 2. Activate virtual environment
@@ -22,7 +22,7 @@ dbt run
 dbt test
 ```
 
-## 🔗 Profile Configuration
+## Profile Configuration
 
 This project uses a local DuckDB connection. Set up `~/.dbt/profiles.yml` like this:
 
@@ -39,18 +39,18 @@ dbt_project:
 
 ---
 
-## 📈 Models Overview
+## Models Overview
 
 - `stg_customer_personalities`: Staged version of the marketing dataset
 - `fct_customer_personalities`: Adds churn flag, age groupings, and more
 
-## 🧪 Tests & Validations
+## Tests & Validations
 
 Basic `not_null` and `unique` tests are applied to primary keys and important fields.
 
 ---
 
-## 📚 Resources
+## Resources
 
 - [dbt Documentation](https://docs.getdbt.com/)
 - [DuckDB](https://duckdb.org/)

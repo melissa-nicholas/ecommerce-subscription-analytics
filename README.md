@@ -1,5 +1,5 @@
 
-# 📈 Customer Churn Dashboard
+# Customer Churn Dashboard
 
 A fully interactive customer churn analytics dashboard built with:
 
@@ -8,14 +8,14 @@ A fully interactive customer churn analytics dashboard built with:
 - `Streamlit` for dashboarding
 - `Pandas` + `Matplotlib` for analysis & visualizations
 
-## 🔍 Use Case
+## Use Case
 
 This project analyzes a fictional customer base (via the *Customer Personality Analysis* dataset) to:
 - Define a churn metric
 - Understand patterns in churn behavior across demographics
 - Build a lightweight, fast, and cost-free churn dashboard using open-source tools
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer        | Tool             |
 |--------------|------------------|
@@ -25,30 +25,34 @@ This project analyzes a fictional customer base (via the *Customer Personality A
 | Orchestration   | Manual / ad hoc for now |
 | Viz Layer       | `Streamlit` (Python) |
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ecommerce-subscription-analytics/
 │
-├── dbt_project/                  # dbt models & warehouse
+├── dbt_project/                  
 │   ├── models/
 │   │   ├── staging/
-│   │   └── marts/
-│   └── ecommerce.duckdb         # DuckDB database
+│   │   │   ├── stg_customer_personalities.sql
+│   │   ├── marts/
+│   │   │   ├── fct_customer_personalities.swl
+│   └── ecommerce.duckdb         
 │
-├── analysis/                    # Exploration notebooks (optional)
+├── analysis/  
+│   ├── 01_explore_customer_data.ipynb
+│   ├── 02_churn_flag_and_retention.ipynb                
 │
-├── churn_dashboard.py           # Main Streamlit app
-├── requirements.txt             # Python dependencies
-└── README.md                    # You are here.
+├── churn_dashboard.py           
+├── requirements.txt             
+└── README.md                    
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone this repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ecommerce-subscription-analytics.git
+git clone https://github.com/melissa-nicholas/ecommerce-subscription-analytics.git
 cd ecommerce-subscription-analytics
 ```
 
@@ -56,7 +60,7 @@ cd ecommerce-subscription-analytics
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # or .\venv\Scripts\activate on Windows
+source venv/bin/activate 
 pip install -r requirements.txt
 ```
 
@@ -75,7 +79,7 @@ dbt build
 streamlit run churn_dashboard.py
 ```
 
-## 📊 Dashboard Features
+## Dashboard Features
 
 - Interactive filters (education level)
 - Churn rate breakdown by:
@@ -87,7 +91,7 @@ streamlit run churn_dashboard.py
 - Pie + bar charts
 - Insight annotations
 
-## 📚 Dataset Info
+## Dataset Info
 
 This project uses the **Customer Personality Analysis** dataset, which contains:
 
@@ -97,16 +101,17 @@ This project uses the **Customer Personality Analysis** dataset, which contains:
 
 → Available for free on [Kaggle](https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis).
 
-## ✨ Coming Soon
+## Coming Soon
 
 - Olist dataset integration
 - dbt + Airflow orchestration
 - Real-time KPI version
 - Cloud-hosted app (Streamlit Cloud / Hugging Face Spaces)
 
-## 🙌 Author
+## Author
 
 **Melissa Nicholas**  
 Senior BI Engineer | Data Nerd | Dashboard Whisperer  
-🔗 [LinkedIn](https://www.linkedin.com/in/melissanicholas)  
+[Connect on LinkedIn](https://www.linkedin.com/in/melissa-nicholas-7a143593/)
 
+Built with ❤️ by Melissa Nicholas
