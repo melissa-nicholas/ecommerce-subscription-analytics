@@ -110,8 +110,7 @@ This project uses the **Customer Personality Analysis** dataset, which contains:
 
 ## Author
 
-**Melissa Nicholas**  
+**Built with ❤️ by Melissa Nicholas**  
 Senior BI Engineer | Data Nerd | Dashboard Whisperer  
 [Connect on LinkedIn](https://www.linkedin.com/in/melissa-nicholas-7a143593/)
 
-Built with ❤️ by Melissa Nicholas
