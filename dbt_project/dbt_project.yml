@@ -36,9 +36,16 @@ models:
         materialized: view
       marts:
         materialized: table
+    olist:
+      staging:
+        materialized: view
+      marts:
+        materialized: table
 seeds:
   dbt_project:
     personality:
       customer_personality:
         header: true
         quote_columns: true
+    olist:
+      header: true

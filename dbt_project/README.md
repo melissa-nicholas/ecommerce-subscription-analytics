@@ -5,8 +5,11 @@ This dbt project models data for customer churn analysis, using DuckDB as the ba
 
 ## Project Structure
 
-- `models/staging/`: Cleans and standardizes raw seed data.
-- `models/marts/`: Core business logic for churn analysis, including `fct_customer_personalities`.
+- `models/olist/staging/`: Cleans and standardizes raw seed data.
+- `models/olist/marts/`: Core business logic for customer engagement, including 
+`int_customer_engagements`.
+- `models/personality/staging/`: Cleans and standardizes raw seed data.
+- `models/personality/marts/`: Core business logic for churn analysis, including `fct_customer_personalities`.
 - `seeds/`: Raw CSVs used as input.
 
 ## Running the Project
@@ -42,11 +45,15 @@ dbt_project:
 ## Models Overview
 
 - `stg_customer_personalities`: Staged version of the marketing dataset
-- `fct_customer_personalities`: Adds churn flag, age groupings, and more
+- `fct_customer_personalities`: Fact model includes business logic
+- `int_customer_churn`: Customer summary with churn flag added
+- `int_customer_engagements`: Combines summary with churn and cohorts
+- `int_customer_cohorts`: Customer summary by cohort
+- `int_customer_order_summary`: Customer summary information
 
 ## Tests & Validations
 
-Basic `not_null` and `unique` tests are applied to primary keys and important fields.
+Basic `not_null` and `unique` tests are applied to primary keys.
 
 ---
 

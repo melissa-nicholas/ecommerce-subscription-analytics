@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_customers_olist
+    description: Staging model for customer olist seed data
+    columns:
+      - name: customer_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_orders_olist
+    description: Staging model for order-level data
+    columns:
+      - name: order_id
+        description: Primary key for each order
+        tests:
+          - not_null
+          - unique
