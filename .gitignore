@@ -2,3 +2,18 @@ __pycache__/
 *.pyc
 .DS_Store
 venv/
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore database files
+*.duckdb
+
+# Ignore large seed files
+dbt_project/seeds/olist/olist_geolocation_dataset.csv
+
+# Ignore system + compiled files
+*.dylib
+*.so
+
