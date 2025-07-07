@@ -11,4 +11,4 @@ with open(input_path, 'r') as infile, open(output_path, 'w', newline='') as outf
     for row in reader:
         writer.writerow(row)
 
-print("✅ File cleaned and saved as customer_personality_clean.csv")
+print("File cleaned and saved as customer_personality_clean.csv")

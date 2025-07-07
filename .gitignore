@@ -1,19 +1,30 @@
+# python cache
 __pycache__/
 *.pyc
-.DS_Store
-venv/
+*.pyo
 
-# Ignore virtual environments
+# macOS system file
+.DS_Store
+
+# virtual environments
 venv/
 .env/
 
-# Ignore database files
+# local database file
 *.duckdb
 
-# Ignore large seed files
+# large CSV seed
 dbt_project/seeds/olist/olist_geolocation_dataset.csv
 
-# Ignore system + compiled files
+# compiled shared libraries
 *.dylib
 *.so
 
+# jupyter notebook checkpoint
+.ipynb_checkpoints/
+
+# streamlit cache
+.streamlit/
+
+# VS Code settings
+.vscode/
